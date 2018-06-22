@@ -57,7 +57,7 @@ http {
 		listen 80;	      # 80포트에 대해서
 		listen [::]:80;	 # 80포트에 대해서
 		# https로 리다이렉트
-		return 301 https://$server_name$request_uri;
+		return 301 https://$host$request_uri;
 	}
 	server {
 		listen 8080;
