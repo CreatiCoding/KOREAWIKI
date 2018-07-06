@@ -39,6 +39,11 @@ mysql -uroot
 
 #### 5) mysql 비밀번호 변경
 
+둘중 아무 방법으로 시도 가능
+
 ```bash
 >> update user set authentication_string=PASSWORD('비밀번호') where user = 'root';
+>> ALTER USER 'root'@'localhost' IDENTIFIED BY '비밀번호';
 ```
+
+자세한 내용: https://dev.mysql.com/doc/refman/8.0/en/resetting-permissions.html
